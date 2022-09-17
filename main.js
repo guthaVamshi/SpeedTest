@@ -1,4 +1,4 @@
-/*var limit = 1;
+var limit = 1;
 var toast = document.querySelector('.toast-body');
 $.ajax({
     method: 'GET',
@@ -12,4 +12,4 @@ $.ajax({
     error: function ajaxError(jqXHR) {
         console.error('Error: ', jqXHR.responseText);
     }
-}); */
+}); 
