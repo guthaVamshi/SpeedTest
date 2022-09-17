@@ -4,31 +4,54 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Sppedester</title>
+        <title>Speedester</title>
+        <link rel="icon" type="image/x-icon" href="speedometer.png">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
       </head>
 <body>
+    <header class="d-flex justify-content-center py-3">
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="#" class="nav-link active " aria-current="page">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link link-secondary">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link link-secondary">About</a></li>
+        </ul>
+      </header>
+      <hr>
+      <div class="container">
+        <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
+          
+              <strong class="me-auto">Fact</strong>
+              <small>Just Now</small>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                <div class="spinner-border text-secondary" role="status">
+                    <span class="visually-hidden ">Loading...</span>
+                  </div>
+            </div>
+          </div>
+      </div>
     <div class="container">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img src="https://cdn-icons-png.flaticon.com/512/1255/1255637.png?w=826&t=st=1663307403~exp=1663308003~hmac=3860705eeeadd708508751bd625675dbddc05b45e8b5e9752c2386cf05d60032"
-                    class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5 p-3">
+            <div class="col-12 col-sm-8 col-lg-6">
+                <img src="https://cdn-icons-png.flaticon.com/512/610/610106.png"
+                    class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="450" height="300" loading="lazy">
             </div>
             <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3">Speed - Ster</h1>
+                <h1 class="display-5 fw-bold lh-2 mb-1">SpeedDester</h1>
                 <p class="lead">You can test your intenet speed here.You can test your internet speed from two servers
                     mentioned below .</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <button type="button" onclick="Changeplug()" class="btn btn-primary btn-lg px-4 gap-3" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        href=".SpeedTester">Open Speed
-                        Test</button>
-                    <button type="button" onclick="Changeplugmeter()" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    <button type="button" onclick="Changeplug()" class="btn btn-outline-secondary btn-lg px-4 gap-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">Open Speed Test</button>
+                    <button type="button" onclick="Changeplugmeter()" data-bs-toggle="modal" data-bs-target="#exampleModal2"
                         class="btn btn-outline-secondary btn-lg px-4">Meter Custom</button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered ">
         <div class="modal-content">
           <div class="modal-header">
@@ -42,7 +65,7 @@
                         <div style="min-height:360px;">
                             <div style="width:100%;height:0;padding-bottom:50%;position:relative;"><iframe
                                     style="border:none;position:absolute;top:0;left:0;width:100%;height:100%;min-height:360px;border:none;overflow:hidden !important;"
-                                    id="Source" src=""></iframe>
+                                    id="Source" src="https://openspeedtest.com/Get-widget.php"></iframe>
         
                             </div>
                         </div>
@@ -53,8 +76,36 @@
         </div>
       </div>
     </div>
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+          <div class="modal-content">
+            <div class="modal-header">
+             Click on Play Button
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div style="text-align: center;">
+                  <div class="SpeedTester" style="min-height:360px" id="scrollspyHeading1">
+                      <div style="text-align:right;">
+                          <div style="min-height:360px;">
+                              <div style="width:100%;height:0;padding-bottom:50%;position:relative;"><iframe
+                                      style="border:none;position:absolute;top:0;left:0;width:100%;height:100%;min-height:360px;border:none;overflow:hidden !important;"
+                                      id="Source" src="https://www.metercustom.net/plugin/"></iframe>
+          
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 <script src="main.js"></script>
+<link rel="stylesheet" href="style.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
 </html>
 
