@@ -1,9 +1,6 @@
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
     background-color: #6c757d;
 }
-body{
-   
-}
 .toast-body{
     display: flex;
     justify-content: center;
